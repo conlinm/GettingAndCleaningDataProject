@@ -86,13 +86,12 @@ img {
 ## The following objects are masked from 'package:base':
 ## 
 ##     intersect, setdiff, setequal, union</code></pre>
-<pre class="r"><code>setwd(&quot;~/Dropbox/Coursera/Getting and Cleaning Data/Project&quot;)
-# Get the general files ready
+<pre class="r"><code># Get the general files ready
 activity_labels &lt;- read.table(&quot;activity_labels.txt&quot;)
 features &lt;- read.table(&quot;features.txt&quot;)
 
 # Get the &quot;test&quot; df ready:
-test &lt;- read.table(&quot;x_test.txt&quot;)
+test &lt;- read.table(&quot;X_test.txt&quot;)
 testy &lt;- read.table(&quot;y_test.txt&quot;)
 subject_test &lt;- read.table(&quot;subject_test.txt&quot;) 
 testy &lt;- left_join(testy, activity_labels, by = &quot;V1&quot;) # add labels to the activities
@@ -101,7 +100,7 @@ test &lt;- cbind(subject_test, test) # add the subjects to the front of df
 
 
 # Get the &quot;train&quot; df ready
-train &lt;- read.table(&quot;x_train.txt&quot;)
+train &lt;- read.table(&quot;X_train.txt&quot;)
 trainy &lt;- read.table(&quot;y_train.txt&quot;)
 subject_train &lt;- read.table(&quot;subject_train.txt&quot;)
 trainy &lt;- left_join(trainy, activity_labels, by = &quot;V1&quot;) # add labels to the activities

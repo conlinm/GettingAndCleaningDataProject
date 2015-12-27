@@ -26,13 +26,12 @@ Good luck!
 
 ```{r}
 library(dplyr)
-setwd("~/Dropbox/Coursera/Getting and Cleaning Data/Project")
 # Get the general files ready
 activity_labels <- read.table("activity_labels.txt")
 features <- read.table("features.txt")
 
 # Get the "test" df ready:
-test <- read.table("x_test.txt")
+test <- read.table("X_test.txt")
 testy <- read.table("y_test.txt")
 subject_test <- read.table("subject_test.txt") 
 testy <- left_join(testy, activity_labels, by = "V1") # add labels to the activities
@@ -41,7 +40,7 @@ test <- cbind(subject_test, test) # add the subjects to the front of df
 
 
 # Get the "train" df ready
-train <- read.table("x_train.txt")
+train <- read.table("X_train.txt")
 trainy <- read.table("y_train.txt")
 subject_train <- read.table("subject_train.txt")
 trainy <- left_join(trainy, activity_labels, by = "V1") # add labels to the activities
