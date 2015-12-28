@@ -15,7 +15,8 @@ The original test and train data files contained 2947 and 7352 observations resp
 - A 561-feature vector with time and frequency domain variables. 
 - Its activity label. 
 - An identifier of the subject who carried out the experiment.
--
+
+
 The final output of the project is my file "conlin_tidy_means.txt"
 This is a text file in a tab delimited format and may be loaded into R using the
 **read.table** function. This is the result of the following general processes on the original data:
@@ -34,12 +35,12 @@ I chose to load the activity labels and subject numbers to the test and train da
 possible errors in the combination of these data frames later.
 By the end of step 7, I have a dataframe that contains all 10299 observations. Each individual observation at this point is for one subject and one activity. These activity_names are:
 
-1 WALKING
-2 WALKING_UPSTAIRS
-3 WALKING_DOWNSTAIRS
-4 SITTING
-5 STANDING
-6 LAYING
+1. WALKING
+2. WALKING_UPSTAIRS
+3. WALKING_DOWNSTAIRS
+4. SITTING
+5. STANDING
+6. LAYING
 
 The results for each variable are numeric. There are mulptiple measurements for each subject in each activity. 
 Finally, the result of step 7, as represented in the file conlin_tidy_means.txt, is one row per subject for each activity. The value of the number for each of the variables (in the columns) are means of the prior multiple measurements for each person in each activity.
